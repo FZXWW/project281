@@ -40,7 +40,7 @@ public class Factorize {
             // Debugging: print the values of x, y, and gcd
             System.out.println("x: " + x + ", y: " + y + ", gcd: " + d);
 
-            if ((d > 1 && d < n) || multi <= n) {
+            if ((d > 1 && d < n) || multi == n) {
 
                 if (isPrime(d)) {
                     listD.addLast(d);
