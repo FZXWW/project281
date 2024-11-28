@@ -108,7 +108,7 @@ public class LinkedList<T> {
     public void display() { // it is from myself just for check the code
         findFirst();
         while (current != null) {
-            System.out.print(current.data + "\t");
+            System.out.print(current.data + "   ");
             current = current.next;
         }
     }
