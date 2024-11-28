@@ -124,6 +124,28 @@ public class LinkedList<T> {
         return false;
     }
 
+    public int myltiplyALL(LinkedList<T> l){
+
+        Node<T> c = l.head;
+        int mul=1;
+
+        if(c == null) return 0;
+        
+
+        if(c.next == null) return (int) c.data;
+
+        while(c.next != null){
+            mul = (int)c.data * mul;
+            c = c.next;
+        }
+        mul = (int)c.data * mul;
+
+        return mul;
+
+    }
+
+    
+
     /*
      * public int totla(){
      * listD.findFirst();

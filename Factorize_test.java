@@ -6,7 +6,7 @@ public class Factorize_test {
         
     
            
-           x.Factorizer(100);
+           x.Factorizer(176);
 
     }
 

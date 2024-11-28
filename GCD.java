@@ -1,18 +1,15 @@
 public class GCD {
 
-    public int gcd(int x , int y , int n ){
+    public int gcd(int x , int n ){
 
-        int sub = Math.abs(x - y); // to make sure the number is positive 
+        if( x == 0  ) return n;
+        if(n == 0 ) return x;
 
-        if( sub == 0  ) return n;
+        if( x < 1 || n < 1) return 0;
 
 
-        while ( sub != 0 ){ //Euclidean
-            int temp = sub;
-            sub = n % sub;
-            n = temp;
-        }
-        return n;
+       if(x > n ) return gcd(n , x%n);
+       else return gcd(x , n%x );
     }
 
 
