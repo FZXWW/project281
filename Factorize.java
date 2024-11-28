@@ -23,92 +23,84 @@ public class Factorize {
 
     public LinkedList<Integer> Factorizer(int n) {
 
-        // int d=1 ,  x = 2, y = 2;
+        int d=1 ,  x = 2, y = 2;
 
-        // int i = 1; // avoid Infinit Loop
+        int i = 1; // avoid Infinit Loop
 
-        // int maxIteration = 30;
+        int maxIteration = 30;
 
-        // while(i < maxIteration){
+        while(i < maxIteration){
 
-        //     d = 1;
+            d = 1;
 
-        // while( (d == 1 || d == n) ){
-        //     x = gen.generaters(x, n);
-        //     y = gen.generaters(gen.generaters(y, n), n);
+        while( (d == 1 || d == n) ){
+            x = gen.generaters(x, n);
+            y = gen.generaters(gen.generaters(y, n), n);
 
-        //     d = gd.gcd(Math.abs(x - y), n);
-
-
-        // }
-        
+            d = gd.gcd(Math.abs(x - y), n);
 
 
-        // if(isPrime(d))
-        //     listD.addLast(d);
-
-
-        // else if (d % 9 == 0){
-        //     d = d / 9;
-        //     listD.addLast(d);
-        //     listD.addLast(d);
-
-        // }
-        //  else if (d % 7 == 0){
-        //     d = d / 7;
-        //     listD.addLast(d);
-        //     listD.addLast(d);
-
-        // }
-        // else if (d % 5 == 0){
-        //     d = d / 5;
-        //     listD.addLast(d);
-        //     listD.addLast(d);
-
-        // }
-        // else if (d % 3 == 0){
-        //     d = d / 3;
-        //     listD.addLast(d);
-        //     listD.addLast(d);
-
-        // }
-    //    else if(!isPrime(d)){ 
-    //     for(int s = 3 ; i < Math.sqrt(d) ; s = s + 2 ){
-    //         d = d/s;
-    //         listD.addLast(d);
-    //         listD.addLast(d);
-
-    //     }
-    //}
-        
-    ///////////////////////////////////////////////////////////////////////////////////////
-    while (n % 2 == 0) {
-        listD.addLast(2);
-        n /= 2;
-    }
-    
-    // Now check for odd factors from 3 upwards
-    for (int i = 3; i <= Math.sqrt(n); i += 2) {
-        while (n % i == 0) {
-            listD.addLast(i);
-            n /= i;
         }
-    }
-    
-    // If the remaining number is greater than 2, it's prime
-    if (n > 2) {
-        System.out.print(n + "  "); // The remaining prime factor
-    }
+        
 
 
+        if(isPrime(d))
+            listD.addLast(d);
+
+
+        else if (d % 9 == 0){
+            d = d / 9;
+            listD.addLast(d);
+            listD.addLast(d);
+
+        }
+         else if (d % 7 == 0){
+            d = d / 7;
+            listD.addLast(d);
+            listD.addLast(d);
+
+        }
+        else if (d % 5 == 0){
+            d = d / 5;
+            listD.addLast(d);
+            listD.addLast(d);
+
+        }
+        else if (d % 3 == 0){
+            d = d / 3;
+            listD.addLast(d);
+            listD.addLast(d);
+
+        }
+
+        else if (d % 2 == 0){
+            d = d / 2;
+            listD.addLast(d);
+            listD.addLast(d);
+
+        }
+        
     
+        else 
+        gen.c++;
+         @SuppressWarnings("unchecked")
+        int multi = O.myltiplyALL(listD);
+        if(multi == n)
+            break;
+         i++;
+    }
         
              listD.display();
             return listD;
-
     }
 
 }
+    
+
+
+
+
+
 
 // mohammad SOLUTION
 // public LinkedList<Integer> Factorizer(int n) {

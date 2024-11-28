@@ -113,16 +113,16 @@ public class LinkedList<T> {
         }
     }
 
-    public boolean isInList(LinkedList<Integer> list, int value) {
-        Node<Integer> current = list.head;
-        while (current != null) {
-            if (current.data.equals(value)) {
-                return true;
-            }
-            current = current.next;
-        }
-        return false;
-    }
+    // public boolean isInList(LinkedList<Integer> list, int value) {
+    //     Node<Integer> current = list.head;
+    //     while (current != null) {
+    //         if (current.data.equals(value)) {
+    //             return true;
+    //         }
+    //         current = current.next;
+    //     }
+    //     return false;
+    // }
 
     public int myltiplyALL(LinkedList<T> l){
 

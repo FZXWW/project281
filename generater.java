@@ -6,5 +6,12 @@ public class generater {
         int r = (((x * x) + c) % n);  // f(x) = x^2 + c mod n
         return r;
     }
+
+    
+
+    // public int generaters(int x, int n , int c) {
+    //     int r = (((x * x) + c) % n);  // f(x) = x^2 + c mod n
+    //     return r;
+    // }
     
 }
