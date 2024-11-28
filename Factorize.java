@@ -1,6 +1,7 @@
 public class Factorize {
 
     LinkedList<Integer> listD = new LinkedList<Integer>();
+    @SuppressWarnings("rawtypes")
     LinkedList O = new LinkedList();
 
     generater gen = new generater();
@@ -38,6 +39,7 @@ public class Factorize {
             y = gen.generaters(gen.generaters(y, n), n);
 
             d = gd.gcd(Math.abs(x - y), n);
+           
 
 
         }
@@ -83,10 +85,13 @@ public class Factorize {
     
         else 
         gen.c++;
+
+
          @SuppressWarnings("unchecked")
         int multi = O.myltiplyALL(listD);
         if(multi == n)
             break;
+            
          i++;
     }
         
@@ -95,63 +100,4 @@ public class Factorize {
     }
 
 }
-    
-
-
-
-
-
-
-// mohammad SOLUTION
-// public LinkedList<Integer> Factorizer(int n) {
-
-//     int x = 2, y = 2, d = 1, count = 0, multi = 1;
-//     boolean status = true;
-
-//     while (status) {
-        
-//         x = gen.generaters(x, n);
-//         y = gen.generaters(gen.generaters(y, n), n);
-
-//         d = gd.gcd(Math.abs(x - y), n);
-
-//         int mx = 1; // avoid Infinit Loop
-//         int maxIteration = 10;
-
-//         if (d % 9 == 0)
-//             d = d / 9;
-//         else if (d % 7 == 0)
-//             d = d / 7;
-//         else if (d % 5 == 0)
-//             d = d / 5;
-//         else if (d % 3 == 0)
-//             d = d / 3;
-//         else if (d % 2 == 0)
-//             d = d / 2;
-
-//         // Debugging: print the values of x, y, and gcd
-//         System.out.println("x: " + x + ", y: " + y + ", gcd: " + d);
-
-        
-
-//         if ((d > 1 && d < n) || multi == n) {
-
-//             if (isPrime(d)) {
-//                 listD.addLast(d);
-//                 count++;
-//                 multi *= d;
-//             } 
-
-//             if (multi == n)
-//                 status = false;
-//         }
-
-//         else if (d >= n)
-//             break;
-
-//     }
-
-//     System.out.println("Total factors found: " + count);
-//     listD.display();
-//     return listD;
-// }
+     
